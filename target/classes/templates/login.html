@@ -1,0 +1,64 @@
+<!-- created by: Akshima Sharma (ADID : ) -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0ccd48ad8b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="" th:href="@{css/login.css}">
+    <title>Online Banking System</title>
+</head>
+
+<body>
+    <section class="form_container">
+
+        <div class="form_left">
+            <form action="login" class="form" method="post">
+                <h1>Welcome to XYZ Bank</h1>
+                <p class="span">Safe & Secure Online Banking</p>
+                <div class="form_group">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    <input type="text" name="UserID" id="name" placeholder="UserID">
+                </div>
+                <div class="form_group">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                    <input type="password" name="Password" id="password" placeholder="Password">
+                    <!-- <i class="fa fa-eye" aria-hidden="true"></i> -->
+                </div>
+            <!--   <div class="form_group">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    <select name="user-type" id="user-type">
+                        <option value="customer">Customer</option>
+                        <option value="admin">Administrator</option>
+                    </select>
+                </div> -->
+                <div class="form_btns">
+                    <div class="checkbox">
+                        <input type="checkbox" id="Remember" name="" value="checked">
+                        <label for="Remember">Remember me</label>
+                    </div>
+                    <div class="logInbtn">
+                    	<input type="submit" value="LOGIN"> 
+                     <!--  <a href="./Pages/adminDash.html">LOGIN</a> -->
+                    </div>
+                </div>
+                <div class="form_span">
+                    <a href="#"><span>Forget password?</span></a>
+                </div>
+                
+            </form>
+            
+        </div>
+        <div class="form_right">
+            <img src="" th:src="@{images/login_img.jpg}" alt="">
+        </div>
+    </section>
+</body>
+
+</html>

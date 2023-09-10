@@ -1,0 +1,90 @@
+<!-- created by: Akshima Sharma (ADID : ) -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0ccd48ad8b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="" th:href="@{css/userDash.css}">
+    <title>Customer Dashboard</title>
+</head>
+
+<body>
+    <section class="header">
+        <div class="header_left">
+            <img src="" th:src="@{images/logoipsum-logo-35.svg}" alt="">
+            <span>XYZ Bank</span>
+        </div>
+        <div class="header_right">
+            <img src="" th:src="@{images/user.png}" alt="">
+            <a href="#">User</a>
+        </div>
+    </section>
+    <section class="dash">
+        <div class="dash_left">
+            <ul>
+                <a class="active" href="#">Home</a>
+                <a class="" href="#">Transaction</a>
+                <a class="" href="viewPayeeForm">Payee</a>
+                <a class="" href="#">Account</a>
+                <a href="#">Log-out</a>
+            </ul>
+        </div>
+        <div class="dash_right">
+            <span>Account Details</span>
+            <div class="acc_info">
+                <div>
+                    <span>Main Account</span>
+                    <p>XYZ Saving Account</p>
+                    <span>Account Number</span>
+                    <p>8888 &nbsp; 12400 &nbsp; 1111 &nbsp; 90867</p>
+                    <a href="#">Transfer Money</a>
+                </div>
+                <div>
+                    <span>Balance Amount</span>
+                    <p style="font-size: 2rem;">65,900</p>
+                </div>
+            </div>
+            <div class="acc_transfer">
+                <span style="font-size: 1.2rem;font-weight: 600;display: block;margin-bottom: 1.5rem;">Latest
+                    transaction</span>
+                <div class="transaction">
+                    <div>
+                        <span class="table_header">Payee Account Number</span>
+                        <span class="table_header">Branch Name</span>
+                        <span class="table_header">Amount</span>
+                    </div>
+                    <div>
+                        <span>1234&nbsp;1234&nbsp;1111 &nbsp;90867</span>
+                        <span>ABC Branch, Delhi</span>
+                        <span>18000</span>
+                    </div>
+                    <div>
+                        <span>5435&nbsp;1111&nbsp;0979 &nbsp;90867</span>
+                        <span>ABC Branch, Delhi</span>
+                        <span>1000</span>
+                    </div>
+                    <div>
+                        <span>8975&nbsp;4324&nbsp;6754 &nbsp;90867</span>
+                        <span>ABC Branch, Delhi</span>
+                        <span>16000</span>
+                    </div>
+                    <div>
+                        <span>1234&nbsp;1111&nbsp;1111 &nbsp;90867</span>
+                        <span>ABC Branch, Delhi</span>
+                        <span>2000</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
