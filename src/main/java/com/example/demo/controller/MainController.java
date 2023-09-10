@@ -595,12 +595,5 @@ public class MainController {
 	
 		model.addAttribute("RDInvestmentList", findAllByCustomerID);
 		return "UserRDAccounts";
-	}
-	
-	
-	
-	
+	}	
 }
-
-	
-
