@@ -12,6 +12,23 @@
         href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="" th:href="@{css/userDash.css}">
+    <style>
+        table {
+            width: 100%;
+            padding: 0 4rem;
+            margin-bottom: 2rem;
+        }
+
+        th {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        td {
+            text-align: center;
+        }
+     </style>
     <title>Customer Dashboard</title>
 </head>
 
@@ -29,11 +46,13 @@
     <section class="dash">
         <div class="dash_left">
             <ul>
-                <a class="active" href="#">Home</a>
-                <a class="" href="#">Transaction</a>
-                <a class="" href="viewPayeeForm">Payee</a>
-                <a class="" href="#">Account</a>
-                <a href="#">Log-out</a>
+                <a class="active" href="backCustmerHome">Home</a>
+                <a class="" href="transaction">Transaction</a>
+                <a class="" href="viewPayeeForm">Add Payee</a>
+                <a class="" href="viewpayee">View Payee</a>
+                <a class="" href="createFDRD">Account</a>
+                <a class="" href="myInvestment">My Investments</a>
+                <a href="logout">Log-out</a>
             </ul>
         </div>
         <div class="dash_right">
@@ -43,29 +62,59 @@
                     <span>Main Account</span>
                     <p>XYZ Saving Account</p>
                     <span>Account Number</span>
-                    <p>8888 &nbsp; 12400 &nbsp; 1111 &nbsp; 90867</p>
-                    <a href="#">Transfer Money</a>
+                  <!--   <p>8888 &nbsp; 12400 &nbsp; 1111 &nbsp; 90867</p>  -->
+                  <table >
+                	<tr th:each="acc : ${AccList}">
+				   <td th:text="${acc.AccountNumber}" style="font-size: 30px;">AccountNumber</td>
+				   </tr>
+                </table>
+                    <a href="transaction">Transfer Money</a>
                 </div>
-                <div>
+                <div style="font-size: 30px;font-weight: 700;">
                     <span>Balance Amount</span>
-                    <p style="font-size: 2rem;">65,900</p>
+                <!--      <p style="font-size: 2rem;" th:each="accBal : ${AccList}">
+                    <input type="text" th:value="${accBal.AccountBalance}"><h2 th:text="${accBal.AccountBalance}">AccountBalance</h2></p>
+                -->
+                <p style="font-size: 2rem;">
+                <table>
+                	<tr th:each="acc : ${AccList}">
+				   <td th:text="${acc.AccountBalance}">AccountBalance</td>
+				   </tr>
+                </table>
+               		<!--  <h2 th:text="${accBal.AccountBalance}"></h2> -->
+                </p>
+                
                 </div>
             </div>
             <div class="acc_transfer">
                 <span style="font-size: 1.2rem;font-weight: 600;display: block;margin-bottom: 1.5rem;">Latest
                     transaction</span>
-                <div class="transaction">
+                    <table border="1">
+					  <tr>
+					   <td>Payee Account Number</td>
+					   <td>Payee Branch</td>
+					   <td>Amount</td>
+					   <td>Transaction ID</td>
+					  </tr>
+					  <tr th:each="transac : ${transacList}">
+					   <td th:text="${transac.receiverAccNo}">receiverAccNo</td>
+					   <td th:text="${transac.receiverBranchName}">receiverBranchName</td>
+					   <td th:text="${transac.amount}">amount</td>
+					   <td th:text="${transac.transactionID}">transactionID</td>
+					  </tr>
+				 </table>   
+              <!--    <div class="transaction">
                     <div>
                         <span class="table_header">Payee Account Number</span>
                         <span class="table_header">Branch Name</span>
                         <span class="table_header">Amount</span>
                     </div>
                     <div>
-                        <span>1234&nbsp;1234&nbsp;1111 &nbsp;90867</span>
-                        <span>ABC Branch, Delhi</span>
-                        <span>18000</span>
+                        <span th:text="${transacList.receiverAccNo}">receiverAccNo</span>
+                        <span th:text="${transacList.receiverBranchName}">receiverBranchName</span>
+                        <span th:text="${transacList.amount}">amount</span>
                     </div>
-                    <div>
+                     <div>
                         <span>5435&nbsp;1111&nbsp;0979 &nbsp;90867</span>
                         <span>ABC Branch, Delhi</span>
                         <span>1000</span>
@@ -79,8 +128,8 @@
                         <span>1234&nbsp;1111&nbsp;1111 &nbsp;90867</span>
                         <span>ABC Branch, Delhi</span>
                         <span>2000</span>
-                    </div>
-                </div>
+                    </div> 
+                </div>-->
 
             </div>
         </div>

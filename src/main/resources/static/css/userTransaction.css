@@ -10,7 +10,6 @@ a{
 :root {
     --primary-red: #F55353;
     --primary-blue: #1E2A78;
-    --primary-light-blue: #f1f2ff;
     --Grey-light-1: #faf9f9;
     --Grey-light-2: #f4f2f2;
     --Grey-light-3: #f0eeee;
@@ -46,7 +45,7 @@ body{
 }
 .dash_left{
     width: 20%;
-    height: 100vmax;
+    height: 100vh;
     background-color: var(--Grey-light-2);
 }
 .dash_left > ul{
@@ -68,7 +67,6 @@ body{
 .dash_right{
     padding: 2rem 0 0 1rem;
     width: 80%;
-    background-color: var(--primary-light-blue);
 }
 .dash_right > span{
     display: block;
@@ -76,72 +74,50 @@ body{
     text-align: center;
     text-transform: uppercase;
     color: var(--primary-blue);
-    margin-bottom: 1.5rem;
 }
 
-.dash_right .acc_info{
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    padding: 1.6rem;
-    margin: 1rem 2rem;
-    border-radius: 10px;
-}
-.dash_right .acc_info > div:last-child{
-    text-align: center;
-} 
-.dash_right .acc_info p{
-    font-size: 1.2rem;
-    color: var(--primary-blue);
-    font-weight: 600;
-    margin: 0.4rem 0;
-}
-.dash_right .acc_info a{
-    background-color: var(--primary-blue);
-    color: white;
-    padding: 1rem 1.2rem;
-    display: block;
-    width: max-content;
+.dash_right > form{
+    width: 60%;
+    margin: auto;
     margin-top: 2rem;
-    border-radius: 6px;
 }
-
-.dash_right .acc_transfer{
-    background-color: white;
-    padding: 1.6rem;
-    margin: 1rem 2rem;
-    border-radius: 10px;
-}
-
-.acc_transfer .transaction > div{
-    width: 100%;
+.dash_right > form > .form_grp{
+    margin: 1.3rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
 }
-.acc_transfer .transaction > div .table_header{
-    color: var(--primary-blue);
-    font-size: 1.2rem;
-}
-
-/* Account Page */
-
-.dash_right .account_container{
-    display: flex;
-    justify-content: space-between;
-}
-.dash_right .account_div{
-    width: 50%;
-    padding: 1rem;
-    background-color: white;
-    border-radius: 5px;
-    margin: 0 1rem;
-    display: flex;
-    justify-content: space-between;
-}
-.dash_right .account_div .account_info span{
-    display: block;
-    margin-bottom: 0.6rem;
+.dash_right > form > .form_grp > label{
     font-size: 1.1rem;
+    color: var(--primary-blue);
+}
+.dash_right > form > .form_grp > input{
+    padding: 0.5rem;
+    width: 70%;
+    font-family: inherit;
+    font-size: 1.1rem;
+    border: none;
+    box-shadow: var(--shadow-dark);
+    background-color: var(--Grey-light-1);
+}
+.dash_right > form > .form_grp > select{
+    padding: 0.5rem;
+    width: 70%;
+    font-family: inherit;
+    font-size: 1.1rem;
+    border: none;
+    box-shadow: var(--shadow-dark);
+    background-color: var(--Grey-light-1);
+}
+.submitbtn{
+    text-align: center;
+    margin-top: 4rem;
+}
+.submitbtn > input{
+    font-family: inherit;
+    padding: 0.7rem 2.5rem;
+    background-color: var(--primary-red);
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 5px 10px var(--Grey-light-4)
 }

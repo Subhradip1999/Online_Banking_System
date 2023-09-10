@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0ccd48ad8b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="" th:href="@{css/adminDash.css}">
+    <script th:src="@{js/jquery-3.6.0.js}"></script>
+    <script th:src="@{js/common.js}"></script>
+    <style>
+        .submitbtn {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .submitbtn>input {
+            font-family: inherit;
+            padding: 0.7rem 2.5rem;
+            background-color: var(--primary-red);
+            color: white;
+            text-decoration: none;
+            box-shadow: 0 5px 10px var(--Grey-light-4);
+            border: none;
+        }
+
+        table {
+            width: 100%;
+            padding: 0 4rem;
+        }
+
+        th {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+    <title>Administrator Dashboard</title>
+</head>
+
+<body>
+    <section class="header">
+        <div class="header_left">
+            <img src="" th:src="@{images/logoipsum-logo-35.svg}" alt="">
+            <span>XYZ Bank</span>
+        </div>
+        <div class="header_right">
+            <img src="" th:src="@{images/user.png}" alt="">
+            <a href="#">Admin</a>
+        </div>
+    </section>
+    <section class="dash">
+        <div class="dash_left">
+            <ul>
+                <a class="" href="newCustomer">Create new user</a>
+				<a class="" href="changeAdminPassword">Change Password</a>
+                <a class="" href="logout">Log-out</a>
+            </ul>
+        </div>
+        <div class="dash_right" >
+          <h1 style="text-align: center; margin-bottom: 2rem; font-size: 1.6rem; color: #1E2A78;">Welcome to Admin
+                Dashboard</h1>
+            <hr>
+            <h2 style="text-align: center;">Notification tab</h2>
+            <div id="notification"></div>
+            <hr>
+            <div id="displayPayeeStats">
+            	<div class="acc_transfer"  style="margin-top: 4rem;">
+                <span style="font-size: 1.2rem;font-weight: 600;display: block;margin-bottom: 1.5rem;">Existing
+                    Payee</span>
+                <div class="transaction">
+				<table border="1">
+				  <tr>
+				  <td>Customer ID</td>
+				   <td>Payee Name</td>
+				   <td>Acc no</td>
+				   <td>Branch</td>
+				   <td>IFSC Code</td>
+				   <td>Status</td>
+				  </tr>
+				  <tr th:each="payee : ${PayeeList}">
+				  <td th:text="${payee.customerId}">Customer Id</td>
+				   <td th:text="${payee.payee_name}">Payee Name</td>
+				   <td th:text="${payee.account_number}">Account number</td>
+				   <td th:text="${payee.bankBranch}">Branch</td>
+				   <td th:text="${payee.ifsc}">IFSC</td>
+				   <td th:text="${payee.status}">Status</td>
+				  </tr>
+				 </table>                    
+                    
+                </div>
+        	  	<form action="activatePayee">
+        			<div class="submitbtn">
+                    	<input type="submit" value= "Activate all Payee">	
+                	</div>
+        		</form>
+            </div>
+            	
+            </div>
+        </div>
+        
+    </section>
+    
+    
+</body>
+
+</html>
+	

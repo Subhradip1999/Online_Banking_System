@@ -30,16 +30,17 @@
     <section class="dash">
         <div class="dash_left">
             <ul>
+            	<a class="" href="backHome">Home</a>
                 <a class="active" href="newCustomer">Create new user</a>
 				<a class="" href="changeAdminPassword">Change Password</a>
-                <a class="" href="#">Log-out</a>
+                <a class="" href="logout">Log-out</a>
             </ul>
         </div>
         <div class="dash_right">
             <span>Create New Customer</span>
 			
 			<section class="edit_profile">
-        <a href="./userDash.html" class="back_icon"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+     <!--    <a href="./userDash.html" class="back_icon"><i class="fa fa-arrow-left" aria-hidden="true"></i></a> -->
         <h1>Edit Profile</h1>
         <form class="edit_profile-form" action="enterNewCustomer" method="post">
             <div class="form_groups">
@@ -84,11 +85,11 @@
                     <label class="form-label" for="pan_number">PAN Number</label>
                     <input class="form-input" type="text" id="pan_number" name="panNumber" placeholder="PAN number">
                 </div>
-               $nbsp; <div class="form_group">
+               &nbsp; <div class="form_group">
                     <label class="form-label" for="phone">Mobile</label>
                     <input class="form-input" type="number" id="phone" name="mobileNo" placeholder="Phone Number">
                 </div>
-               $nbsp; <div class="form_group">
+               &nbsp; <div class="form_group">
                     <label class="form-label" for="phone">Land Phone</label>
                     <input class="form-input" type="number" id="phone" name="landPh" placeholder="Phone Number">
                 </div>
@@ -111,15 +112,15 @@
                     <label class="form-label" for="customer_id">Customer Id</label>
                     <input class="form-input" type="text" id="customer_id" name="customerId" placeholder="Customer Id">
                 </div>
-                <div class="form_group">
+      <!--          <div class="form_group">
                     <label class="form-label" for="balance">Account Number</label>
                     <input class="form-input" type="text" id="account_number" name="accNo" placeholder="Account Number">
-                </div>
+                </div> --> 
             </div>
             <div class="form_groups">
                 <div class="form_group">
                     <label class="form-label" for="customer_id">Card No</label>
-                    <input class="form-input" type="number" id="customer_id" name="cardNo" placeholder="Customer Id">
+                    <input class="form-input" type="number" id="customer_id" name="cardNo" placeholder="Card No">
                 </div>
             </div>
            

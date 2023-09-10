@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0ccd48ad8b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" th:href="@{css/userDash.css}">
+    <link rel="stylesheet" th:href="@{css/userDashPayee.css}">
+    <title>User Dashboard</title>
+</head>
+
+<body>
+    <section class="header">
+        <div class="header_left">
+            <img src="" th:src="@{images/logoipsum-logo-35.svg}" alt="">
+            <span>XYZ Bank</span>
+        </div>
+        <div class="header_right">
+            <img src="" th:src="@{images/user.png}" alt="">
+            <a href="#">User</a>
+        </div>
+    </section>
+    <section class="dash">
+        <div class="dash_left">
+            <ul>
+                <a class="" href="backCustmerHome">Home</a>
+                <a class="" href="transaction">Transaction</a>
+                <a class="" href="viewPayeeForm">Add Payee</a>
+                <a class="" href="viewpayee">View Payee</a>
+                <a class="active" href="createFDRD">Account</a>
+                <a class="" href="myInvestment">My Investments</a>
+                <a href="logout">Log-out</a>
+            </ul>
+        </div>
+        <div class="dash_right">
+            <div class="account_container">
+                <div class="account_div">
+                    <div class="account_info">
+                        <span>Account Type: &nbsp; <strong>Fixed Account</strong></span>
+                        <span>Time Period: &nbsp; <strong>5 Years</strong></span>
+                    </div>
+                    <div class="account_info">
+                        <span>Invested Amount: &nbsp; <strong>1,00,000</strong></span>
+                        <span>Interest Rate: &nbsp; <strong>6.5%</strong></span>
+                        <span>Returns: &nbsp; <strong>38,042</strong></span>
+                        <span>Total Value: &nbsp; <strong>1,38,042</strong></span>
+                    </div>
+                </div>
+                <div class="account_div">
+                    <div class="account_info">
+                        <span>Account Type: &nbsp; <strong>Recurring Account</strong></span>
+                        <span>Time Period: &nbsp; <strong>3 Years</strong></span>
+                        <span>Monthly Investment: &nbsp; <strong>50,000</strong></span>
+                    </div>
+                    <div class="account_info">
+                        <span>Total Invested: &nbsp; <strong>18,00,000</strong></span>
+                        <span>Interest Rate: &nbsp; <strong>6.5%</strong></span>
+                        <span>Returns: &nbsp; <strong>1,91,214</strong></span>
+                        <span>Total Value: &nbsp; <strong style="color: var(--primary-blue);">19,91,214</strong></span>
+                    </div>
+                </div>
+            </div>
+            <span style="display: block;margin-top: 3rem;">Create A New Account</span>
+            <form action="/addFDRDAcc" method="post">
+            	<div class="form_grp">
+                    <label for="account_number">Customer ID</label>
+                    <input type="text" name="customerId" id="customerID" placeholder="Enter Customer ID"
+                        required>
+                </div>
+                <div class="form_grp">
+                    <label for="account_number">Full Name</label>
+                    <input type="text" name="fullName" id="fullName" placeholder="Enter Your Full Name"
+                        required>
+                </div>
+                <div class="form_grp">
+                    <label for="account_number">Pan Number</label>
+                    <input type="text" name="panNumber" id="panNumber" placeholder="Enter Pan number"
+                        required>
+                </div>
+                <div class="form_grp">
+                    <label for="account_number">Account Number</label>
+                    <input type="number" name="account_number" id="account_number" placeholder="Enter account number"
+                        required>
+                </div>
+                <div class="form_grp">
+                    <label for="branch">Branch Name</label>
+                    <input type="text" name="branch" id="branch" placeholder="Enter branch name" required>
+                </div>
+                <div class="form_grp">
+                    <label for="type">Account Type</label>
+                    <select type="text" name="AccountType" id="type" placeholder="Enter account type" required>
+                        <option value="Fixed">Fixed</option>
+                        <option value="Recurring">Recurring</option>
+                    </select>
+                </div>
+                <div class="form_grp">
+                    <label for="type">Invested Amount(for recurring, amount per month)</label>
+                    <select type="text" name="InvestedAmount" id="InvestedAmount" placeholder="Select Amount" required>
+                        <option value="10000">10000</option>
+                        <option value="20000">20000</option>
+                        <option value="30000">30000</option>
+                    </select>
+                </div>
+                <div class="form_grp">
+                    <label for="branch">Nominee</label>
+                    <input type="text" name="nominee" id="nominee" placeholder="Enter nominee name" required>
+                </div>
+            <!--     <div class="form_grp">
+                    <label for="amount">Amount(for recurring, amount per month)</label>
+                    <input type="number" name="amount" id="amount" placeholder="Enter amount...">
+                </div>
+                <div class="form_grp">
+                    <label for="year">Time Period</label>
+                    <input type="number" name="tenure" id="year" placeholder="Enter time period...">
+                </div>  -->
+                <div class="form_grp">
+                    <label for="date">Starting Date</label>
+                    <input type="date" name="StartDate" id="date" placeholder="Enter date...">
+                </div>
+                <div class="submitbtn">
+                    <input type="submit" value= "Create Account">	
+                </div>
+            </form>
+
+        </div>
+    </section>
+</body>
+
+</html>

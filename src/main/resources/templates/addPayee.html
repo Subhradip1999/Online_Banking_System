@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0ccd48ad8b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/userDashPayee.css}">
+    <title>User Dashboard</title>
+  
+</head>
+
+<body>
+    <section class="header">
+        <div class="header_left">
+            <img src="" th:src="@{images/logoipsum-logo-35.svg}" alt="">
+            <span>XYZ Bank</span>
+        </div>
+        <div class="header_right">
+            <img src="" th:src="@{images/user.png}" alt="">
+            <a href="#">User</a>
+        </div>
+    </section>
+    <section class="dash">
+        <div class="dash_left">
+            <ul>
+                <a class="" href="backCustmerHome">Home</a>
+                <a class="" href="transaction">Transaction</a>
+                <a class="active" href="viewPayeeForm">Add Payee</a>
+                <a class="" href="viewpayee">View Payee</a>
+                <a class="" href="createFDRD">Account</a>
+                <a class="" href="myInvestment">My Investments</a>
+                <a href="logout">Log-out</a>
+            </ul>
+        </div>
+        <div class="dash_right">
+            <span>Request to add payee</span>
+            <form action="addPayee" method="post">
+                <div class="form_grp">
+                    <label for="payee_name">Payee Name</label>
+                    <input type="text" name="payee_name" id="payee_name" placeholder="Enter payee name" required>
+                </div>
+                <div class="form_grp">
+                    <label for="account_number">Account Number</label>
+                    <input type="number" name="account_number" id="account_number" placeholder="Enter account number"
+                        required>
+                </div>
+                <div class="form_grp">
+                    <label for="address">Bank Name and Branch</label>
+                    <input type="text" name="bankBranch" id="address" placeholder="Enter Bank name & Branck" required>
+                </div>
+                <div class="form_grp">
+                    <label for="ifsc">IFSC Code</label>
+                    <input type="number" name="ifsc" id="ifsc" placeholder="Enter ifsc code" required>
+                </div>
+             <div class="submitbtn">
+                    <input type="submit" value= "Request to add payee">	
+                </div>
+            </form>
+
+        </div>
+    </section>
+</body>
+
+</html>

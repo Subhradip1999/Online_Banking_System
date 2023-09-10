@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0ccd48ad8b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="" th:href="@{css/userTransaction.css}">
+    <title>Transactions</title>
+</head>
+
+<body>
+    <section class="header">
+        <div class="header_left">
+            <img src="" th:src="@{images/logoipsum-logo-35.svg}" alt="">
+            <span>XYZ Bank</span>
+        </div>
+        <div class="header_right">
+            <img src="" th:src="@{images/user.png}" alt="">
+            <a href="#">User</a>
+        </div>
+    </section>
+    <section class="dash">
+        <div class="dash_left">
+            <ul>
+                <a class="" href="backCustmerHome">Home</a>
+                <a class="active" href="transaction">Transaction</a>
+                <a class="" href="viewPayeeForm">Add Payee</a>
+                <a class="" href="viewpayee">View Payee</a>
+                <a class="" href="createFDRD">Account</a>
+                <a class="" href="myInvestment">My Investments</a>
+                <a href="logout">Log-out</a>
+            </ul>
+        </div>
+        <div class="dash_right">
+            <span>Transfer Money</span>
+            <form action="sendMoney" method="post">
+                <div class="form_grp">
+                    <label for="account_number">Account Number</label>
+                    <input type="number" name="senderAccNo" id="account_number" placeholder="Enter account number"
+                        required>
+                </div>
+                <div class="form_grp">
+                    <label for="branch">Branch Name</label>
+                    <input type="text" name="senderBranchName" id="branch" placeholder="Enter branch name" required>
+                </div>
+                
+                <div class="form_grp">
+                    <label for="payee_account_number">Payee Account Number</label>
+                    <input type="number" name="receiverAccNo" id="payee_account_number"
+                        placeholder="Enter payee account number...">
+                </div>
+				<div class="form_grp">
+                    <label for="branch">Payee Branch Name</label>
+                    <input type="text" name="receiverBranchName" id="payee_branch" placeholder="Enter branch name" required>
+                </div>
+                <div class="form_grp">
+                    <label for="amount">Amount</label>
+                    <input type="number" name="amount" id="amount" placeholder="Enter amount...">
+                </div>
+                <div class="submitbtn">
+                    <input type="submit" value= "Transfer">	
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
