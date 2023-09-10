@@ -13,6 +13,9 @@
         href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="" th:href="@{css/adminDash.css}">
+    <script th:src="@{js/jquery-3.6.0.js}"></script>
+    <script th:src="@{js/common.js}"></script>
+    
     <title>Administrator Dashboard</title>
 </head>
 
@@ -30,18 +33,23 @@
     <section class="dash">
         <div class="dash_left">
             <ul>
+            	<a class="active" href="backHome">Home</a>
                 <a class="" href="newCustomer">Create new user</a>
 				<a class="" href="changeAdminPassword">Change Password</a>
-                <a class="" href="#">Log-out</a>
+                <a class="" href="logout">Log-out</a>
             </ul>
         </div>
-        <div class="dash_right" style="font-size:50px">
-          <center>
-		  <h1>  <span>Welcome to</span></h1>
-		  <br>
-		  <h1>  <span>Admin Dashboard</span></h1>
-            </center>
+        <div class="dash_right" >
+          <h1 style="text-align: center; margin-bottom: 2rem; font-size: 1.6rem; color: #1E2A78;">Welcome to Admin
+                Dashboard</h1>
+            
+            <hr>
+            <h2 style="text-align: center;">Notification tab</h2>
+            <div id="notification"></div>
+            <hr>
+            <div id="displayPayeeStats"></div>
         </div>
+        
     </section>
 </body>
 
